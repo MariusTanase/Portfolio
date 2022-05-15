@@ -26,7 +26,7 @@ body {
   left: 0;
   width: 100%;
   height: 100%;
-  background: url(/Portfolio/assets/images/bg.webp);
+  background: url(https://mariustanase.com/assets/images/bg.webp);
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center center;
@@ -50,8 +50,12 @@ header {
   flex-direction: row;
   width: 95vw;
   height: 5vh;
-  padding-left: 5rem;
   color: var(--text-primary);
+  flex: 1 1 auto;
+}
+
+.header__title {
+  margin: 0 2rem;
 }
 
 .header__title .header__span {
@@ -62,16 +66,12 @@ header {
 nav > ul {
   display: flex;
   align-items: center;
-  gap: 2rem;
-  padding-right: 2rem;
+  margin: 2rem 0;
 }
 
 .navbar__flex > li {
   font-size: 1.25rem;
-}
-
-.navbar__mobile {
-  display: none;
+  margin-right: 2rem;
 }
 
 /*  ======== HERO  ======== */
@@ -112,8 +112,13 @@ main {
 
   font-size: 0.7rem;
 
-  opacity: 0.6;
+  opacity: 0.5;
 }
+
+.copyrights__link {
+  opacity: 1;
+}
+
 /* ======== MAIN STACK ======== */
 .main__stack {
   display: flex;
@@ -164,13 +169,70 @@ footer {
 }
 
 /*  ======== MOBILE DESIGN */
-@media (min-width: 300px) and (max-width: 740px) {
+@media (min-width: 300px) and (max-width: 780px) {
   html {
-    font-size: 1.05rem;
+    font-size: 1rem;
+  }
+
+  .navbar {
+    display: none;
+  }
+
+  header > .header__title {
+    margin: 0 auto;
+    transition: 0.5s ease-in-out;
+  }
+
+  /* BURGER */
+
+  .burger__menu {
+    position: fixed;
+    bottom: 1rem;
+    right: 1rem;
+    margin-left: 1.2rem;
+    margin-right: 1.2rem;
+
+    width: 3rem;
+    height: 1.5rem;
+    cursor: pointer;
+  }
+
+  .burger__menu-line {
+    position: absolute;
+    left: 0;
+    width: 3rem;
+    height: 4px;
+    background-color: var(--text-primary);
+
+    transform-origin: 4px 0px;
+
+    border-radius: 1rem;
+
+    transition: 0.8s ease-in-out;
+  }
+
+  .burger__menu-line:nth-child(1) {
+    top: 0;
+  }
+  .burger__menu-line:nth-child(2) {
+    top: 50%;
+  }
+  .burger__menu-line:nth-child(3) {
+    top: 100%;
+  }
+
+  .active {
+    background-color: red;
   }
 }
 
-@media (min-width: 741px) and (max-width: 1023px) {
+@media (min-width: 781px) and (max-width: 1023px) {
+  html {
+    font-size: 1.1rem;
+  }
+  .navbar__flex > li {
+    margin-right: 1.5rem;
+  }
 }
 
 @media (min-width: 1024px) and (max-width: 1279px) {
