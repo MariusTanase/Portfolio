@@ -124,6 +124,46 @@ main {
   display: flex;
   justify-content: center;
   align-items: center;
+  flex-direction: column;
+
+  width: 75vw;
+  height: auto;
+
+  margin: 0 auto;
+}
+
+.main__stack-title {
+  font-size: 2rem;
+  margin: 1rem 0;
+}
+
+.main__stack-wrapper {
+  display: flex;
+  flex-direction: row;
+  width: 70vw;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.main__stack-item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  min-width: 100px;
+  height: 100px;
+
+  margin: 0.5rem;
+
+  box-shadow: 5px 3px 10px #000;
+  border-radius: 1rem;
+
+  background: rgba(54, 51, 51, 0.5);
+  color: var(--text-primary);
 }
 /*  ======== ABOUT ======== */
 .main__about {
